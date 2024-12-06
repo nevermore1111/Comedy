@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: darkorange;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background-color: darkorange;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1:hover {
+    color: black;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: darkorange;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: right;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+.announcement {
+    padding: 20px;
+    background: #fff;
+    margin-top: 20px;
+}
+
+.announcement h2 {
+    color: #333;
+}
+
+.announcement p {
+    line-height: 1.6;
+}
+
+.comedy1 {
+    padding: 20px;
+    background: #fff;
+    margin-top: 20px;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.comedy0 {
+    padding: 20px;
+    background: #fff;
+    margin-top: 20px;
+}
+
+.skyisland {
+    padding: 20px;
+    background: #fff;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ghost {
+    padding: 20px;
+    background: #fff;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: darkorange;
+    color: whitesmoke;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+footer p:hover {
+    color: black;
+}
+
+.goTop {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+
+    .goTopBtn {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        text-decoration: none;
+
+        .fa-arrow-alt-circle-up {
+            color: black;
+        }
+    }
+}
+
+.goTopBtn p {
+    font-size: 8px;
+}
+
+/* 響應式設計語法 */
+@media screen and (max-width: 768px) {
+    header ul {
+        display: none;
+    }
+
+    header h1 {
+        left: 50%;
+        transform: translateX(-5%);
+    }
+}

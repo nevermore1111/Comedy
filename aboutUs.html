@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我們</title>
+    <script src="https://kit.fontawesome.com/6469abd78e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./aboutUs.css">
+</head>
+
+<body>
+    <!-- <header>
+        <div class="container">
+            <div id="branding">
+                <h1>菜冠雙頭漫才村</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首頁</a></li>
+                    <li><a href="#">關於我們</a></li>
+                    <li><a href="#">專場公告</a></li>
+                    <li><a href="#">聯繫我們</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header> -->
+
+    <div class="container">
+        <div>
+            <header id="branding">
+                <h1>菜冠雙頭漫才村</h1>
+            </header>
+        </div>
+
+        <nav>
+            <ul>
+                <ul>
+                    <li><a href="./Index.html">首頁</a></li>
+                    <li><a href="./aboutUs.html">關於我們</a></li>
+                    <li><a href="./show.html">專場公告</a></li>
+                    <li><a href="./email.html">聯繫我們</a></li>
+                </ul>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="goTop" id="backToTop">
+        <a href="#" class="goTopBtn jq-goTop">
+            <i class="fa-solid fa-jet-fighter-up fa-bounce fa-2xl"></i>
+            <p>回到頂部</p>
+        </a>
+    </div>
+
+    <script>
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        backToTopButton.onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+
+    <section class="about container">
+        <h2>關於我們</h2>
+        <p>菜冠雙頭成立於2015年，在2017年正式出道成為漫才師，成員分別是裝傻擔當菜頭，以及吐槽擔當冠冠。<br><br>
+
+            菜頭又稱蔡承儒、欸波波、肌弱男、雪糕、醜男。菜頭擅長以浮誇的肢體動作、高分貝的音量，奔馳在搞笑的舞台上。也參與多部知名影視作品，活躍在大銀幕的菜頭，以他最具標誌性、辨別度的馬桶蓋髮型為人所知。<br><br>
+
+            冠冠持有暴力的黑道人設，只是外界並不確定是人設還是本色。負責撰寫漫才段子的冠冠，擁有充沛的創作能力，以及不充沛的睡眠，是代言咖啡、紅牛、檳榔的不二人選，擅長創作後設的劇本，看完菜冠的漫才，觀眾常常笑完後說「三小啦！我看了什麼啊！」<br><br>
+        </p>
+    </section>
+
+    <section class="p1 container">
+        <h2>《操偶師》</h2>
+        <a href="https://reurl.cc/6dLR6M"> <img src="./images/sm20.png" width="100%"></a>
+    </section>
+
+    <section class="p2 container">
+        <h2>《酒鬼》</h2>
+        <a href="https://reurl.cc/GpXqVZ"> <img src="./images/sm21.png" width="100%"></a>
+    </section>
+
+    <section class="p3 container">
+        <h2>生活日常</h2>
+        <div class="life">
+            <a href="https://reurl.cc/rvZb5N"><img src="./images/sm22.png" width="100%"></a>
+            <a href="https://reurl.cc/343Q8l"><img src="./images/sm05.png" width="100%"></a>
+        </div>
+
+    </section>
+    <br>
+
+    <footer>
+        <p>copyright © 菜冠雙頭All Right Reserved</p>
+    </footer>
+</body>
+
+</html>

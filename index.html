@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粉絲專頁</title>
+    <script src="https://kit.fontawesome.com/6469abd78e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="homePage2.css">
+
+    <style>
+        .slider {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 1.5s ease-in-out;
+        }
+
+        .slides img {
+            width: calc(100% - 20px);
+            /* 減去間距 */
+            margin: 0 10px;
+            /* 左右各10px的間距 */
+            border: 0;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+
+        .indicator {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .indicator.active {
+            background-color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <header>
+                <h1>菜冠雙頭漫才村</h1>
+            </header>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="./Index.html">首頁</a></li>
+                <li><a href="./aboutUs.html">關於我們</a></li>
+                <li><a href="./show.html">專場公告</a></li>
+                <li><a href="./email.html">聯繫我們</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="goTop" id="backToTop">
+        <a href="#" class="goTopBtn jq-goTop">
+            <i class="fa-solid fa-jet-fighter-up fa-bounce fa-2xl"></i>
+            <p>回到頁首</p>
+        </a>
+    </div>
+
+    <script>
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        backToTopButton.onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+
+    <section>
+        <div class="slider">
+            <div class="slides">
+                <img src="./images/sm17.png" alt="Image 1">
+                <img src="./images/sm14.png" alt="Image 2">
+                <img src="./images/sm18.png" alt="Image 3">
+            </div>
+            <button class="nav-button prev" onclick="showPrevSlide()">❮</button>
+            <button class="nav-button next" onclick="showNextSlide()">❯</button>
+            <div class="indicators">
+                <div class="indicator" onclick="goToSlide(0)"></div>
+                <div class="indicator" onclick="goToSlide(1)"></div>
+                <div class="indicator" onclick="goToSlide(2)"></div>
+            </div>
+        </div>
+
+        <script>
+            let currentIndex = 0;
+            const slides = document.querySelector('.slides');
+            const totalSlides = slides.children.length;
+            const indicators = document.querySelectorAll('.indicator');
+
+            function updateIndicators() {
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === currentIndex);
+                });
+            }
+
+            function showNextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            function showPrevSlide() {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            function goToSlide(index) {
+                currentIndex = index;
+                slides.style.transform = `translateX(-${currentIndex * (100)}%)`;
+                updateIndicators();
+            }
+
+            setInterval(showNextSlide, 6500);
+
+        </script>
+    </section>
+
+    <section class="p1 container">
+        <h2>菜冠雙頭的YouTube</h2>
+        <p><a href="https://reurl.cc/xvQMn1">了解更多</a></p>
+        <br>
+        <div>
+            <a href="https://reurl.cc/xvQMn1"><img src="./images/sm02.png" width="100%"></a>
+        </div>
+
+    </section>
+    <section class="p2 container">
+        <h2>福狸男孩的YouTube</h2>
+        <p><a href="https://reurl.cc/6d0O1d">了解更多</a></p>
+        <br>
+        <div>
+            <a href="https://reurl.cc/6d0O1d"><img src="./images/sm09.png" width="100%"></a>
+        </div>
+    </section>
+    <section class="p3 container">
+        <h2>漫才日曜日</h2>
+        <p><a href="https://reurl.cc/8X5eLd">了解更多</a></p>
+        <br>
+        <div>
+            <a href="https://reurl.cc/8X5eLd"><img src="./images/sm23.png" width="100%"></a>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <p>歡迎訂閱菜冠雙頭，會不定期的收到我們的小驚喜喔!</p>
+        <form>
+            <input type="email " placeholder="請輸入您的Email" required>
+            <button type="submit">送出</button>
+
+        </form>
+        <form>
+            <br>
+            <div class="QA">
+                <input type="question" placeholder="想跟我們說點什麼嗎?" required>
+                <button type="submit">送出</button>
+            </div>
+        </form>
+    </section>
+
+    <br><br>
+    <footer>
+        <p>copyright © 菜冠雙頭All Right Reserved</p>
+    </footer>
+</body>
+
+</html>

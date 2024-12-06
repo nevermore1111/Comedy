@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: darkorange;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* header {
+    background: darkorange;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: green 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+} */
+
+header {
+    background-color: darkorange;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: darkorange;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: right;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+.announcement {
+    padding: 20px;
+    background: #fff;
+    margin-top: 20px;
+}
+
+.about {
+    padding: 20px;
+    background: #fff;
+    margin-top: 20px;
+}
+
+.p1 {
+    padding: 20px;
+    background: #fff;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.p2 {
+    padding: 20px;
+    background: #fff;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.p3 {
+    padding: 20px;
+    background: #fff;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.life {
+    display: flex;
+}
+
+.about h2 {
+    color: #333;
+}
+
+.about p {
+    line-height: 1.6;
+}
+
+footer {
+    background-color: darkorange;
+    color: whitesmoke;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.goTop {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+
+    .goTopBtn {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        text-decoration: none;
+
+        .fa-arrow-alt-circle-up {
+            color: black;
+        }
+    }
+}
+
+.goTopBtn p {
+    font-size: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    header ul {
+        display: none;
+    }
+
+    header h1 {
+        left: 50%;
+        transform: translateX(-5%);
+    }
+}

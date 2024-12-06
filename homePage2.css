@@ -1,0 +1,232 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: darkorange;
+}
+
+
+header {
+    background-color: darkorange;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header h1:hover {
+    color: black;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: darkorange;
+    overflow: hidden;
+    /* position: fixed;
+    width: 100%; */
+}
+
+nav ul li {
+    float: right;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.p1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.p1 h2 {
+    color: black;
+    font-size: 20px;
+}
+
+.p1 a {
+    color: black;
+    text-decoration: none;
+    border: 1px solid #acacac;
+}
+
+.p1 a:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+.p2 {
+    background-image: url(../images/sm09.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.p2 h2 {
+    color: black;
+    font-size: 20px;
+}
+
+.p2 a {
+    color: black;
+    text-decoration: none;
+    border: 1px solid #acacac;
+}
+
+.p2 a:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+
+.p3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.p3 h2 {
+    color: black;
+    font-size: 20px;
+}
+
+.p3 a {
+    color: black;
+    text-decoration: none;
+    border: 1px solid #acacac;
+}
+
+.p3 a:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+.newsletter {
+    background-color: darkorange;
+    color: white;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter p {
+    margin-bottom: 20px;
+}
+
+.newsletter input,
+.newsletter button {
+    background-color: transparent;
+    color: #DDDDDD;
+    border: 1px solid #DDDDDD;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.newsletter button:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.newsletter p:hover {
+    color: black;
+}
+
+input::placeholder {
+    color: #DDDDDD;
+}
+
+input:focus {
+    outline: none;
+    border-color: whitesmoke;
+}
+
+footer {
+    background-color: darkorange;
+    color: whitesmoke;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+footer p:hover {
+    color: black;
+}
+
+.goTop {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+
+    /* .goTopBtn {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        text-decoration: none;
+
+        .fa-arrow-alt-circle-up {
+            color: black;
+        }
+    } */
+}
+
+.goTopBtn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+
+    .fa-arrow-alt-circle-up {
+        color: black;
+    }
+}
+
+.goTopBtn p {
+    font-size: 8px;
+}
+
+/* 響應式設計語法 */
+@media screen and (max-width: 768px) {
+    header ul {
+        display: none;
+    }
+
+    header h1 {
+        left: 50%;
+        transform: translateX(-5%);
+    }
+}
